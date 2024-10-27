@@ -42,8 +42,7 @@ export class PortainerApi {
   }
 
   async logout(): Promise<void> {
-    await this.axiosInstance.post('/auth/logout')
-    this.axiosInstance.defaults.headers.common['Authorization'] = ''
+    return;
   }
 
   async getStacks(): Promise<StackData[]> {

@@ -26,8 +26,7 @@ class PortainerApi {
         this.axiosInstance.defaults.headers.common['Authorization'] = `Bearer ${data.jwt}`;
     }
     async logout() {
-        await this.axiosInstance.post('/auth/logout');
-        this.axiosInstance.defaults.headers.common['Authorization'] = '';
+        return;
     }
     async getStacks() {
         const { data } = await this.axiosInstance.get('/stacks');
